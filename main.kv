@@ -1,4 +1,4 @@
-floatLay:
+anchorLay:
 
 <MainWidget>:
     Switch:
@@ -47,3 +47,15 @@ floatLay:
         size_hint:0.3, None
         height:"50dp"
         pos_hint:{"right":1, "y":0}
+
+<anchorLay@AnchorLayout>:
+    anchor_x:"left" #center; left; right
+    anchor_y:"top" #bottom, center, top
+    BoxLayout:
+        size_hint:0.3,0.3
+        Button:
+            text:"A"
+        Button:
+            text:"B"
+        Button:
+            text:"C"
