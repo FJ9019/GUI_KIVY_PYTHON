@@ -1,10 +1,32 @@
-MainWidget:
+boxLay:
 
 <MainWidget>:
-    Button:
-        text:"Button"
+    Switch:
+        # min:0
+        # max:200
+        # value:50
+        # multiline:False
+        # width:350
+        # height:200
+        pos:(0,150)
+        # orientation:"vertical"
+        text:"Toggle Button"
     Label:
         text:"Je suis un label"
         pos:(200,0)
         color:"lime"
         font_size:30
+
+<boxLay>:
+    orientation:"vertical"
+    spacing:50
+    padding:20
+    Button:
+        text:"A"
+        size_hint:0.3, None
+        height:"50dp"
+        pos_hint:{"center_x":0.5, "center_y":0.5}
+    Button:
+        text:"B"
+    Button:
+        text:"C"
