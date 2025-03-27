@@ -1,4 +1,4 @@
-boxLay:
+floatLay:
 
 <MainWidget>:
     Switch:
@@ -30,3 +30,20 @@ boxLay:
         text:"B"
     Button:
         text:"C"
+
+<floatLay@FloatLayout>:
+    Button:
+        text:"A"
+        size_hint:0.3, None
+        height:"50dp"
+        pos_hint:{"x":0, "top":1}
+    Button:
+        text:"B"
+        size_hint:0.3, None
+        height:"50dp"
+        pos_hint:{"center_x":0.5, "center_y":0.5}
+    Button:
+        text:"C"
+        size_hint:0.3, None
+        height:"50dp"
+        pos_hint:{"right":1, "y":0}
