@@ -1,90 +1,34 @@
-pageLay:
+MainWidget:
 
 <MainWidget>:
+    Slider:
+        id:slide
+        min:0
+        max:200
+        value:50
+        multiline:False
+        height:200
+        orientation:"vertical"
+        pos:(200, 100)
+
     Switch:
-        # min:0
-        # max:200
-        # value:50
-        # multiline:False
-        # width:350
-        # height:200
         pos:(0,150)
-        # orientation:"vertical"
         text:"Toggle Button"
+
     Label:
         text:"Je suis un label"
         pos:(200,0)
         color:"lime"
         font_size:30
 
-<boxLay>:
-    orientation:"vertical"
-    spacing:50
-    padding:20
-    Button:
-        text:"A"
-        size_hint:0.3, None
-        height:"50dp"
-        pos_hint:{"center_x":0.5, "center_y":0.5}
-    Button:
-        text:"B"
-    Button:
-        text:"C"
+    ProgressBar:
+        min:0
+        max:200
+        width:200
+        pos:(225, 50)
+        value: slide.value
 
-<floatLay@FloatLayout>:
-    Button:
-        text:"A"
-        size_hint:0.3, None
-        height:"50dp"
-        pos_hint:{"x":0, "top":1}
-    Button:
-        text:"B"
-        size_hint:0.3, None
-        height:"50dp"
-        pos_hint:{"center_x":0.5, "center_y":0.5}
-    Button:
-        text:"C"
-        size_hint:0.3, None
-        height:"50dp"
-        pos_hint:{"right":1, "y":0}
-
-<anchorLay@AnchorLayout>:
-    anchor_x:"left" #center; left; right
-    anchor_y:"top" #bottom, center, top
-    BoxLayout:
-        size_hint:0.3,0.3
-        Button:
-            text:"A"
-        Button:
-            text:"B"
-        Button:
-            text:"C"
-
-<gridLay@GridLayout>:
-    #cols:colonnes
-    #rows:lignes
-    cols:3
-    Button:
-        text:"A"
-        size_hint:0.3, None
-        height:"50dp"
-        pos_hint:{"right":0.5, "center_y":0.5}
-    Button:
-        text:"B"
-    Button:
-        text:"C"
-    Button:
-        text:"D"
-        size_hint:0.3, None
-    Button:
-        text:"E"
-    Button:
-        text:"F"
-
-<pageLay@PageLayout>:
-    MainWidget
-    boxLay
-    gridLay
-    floatLay
-    anchorLay
-            
+    Label:
+        text : str(50)   
+        pos: (300, 150) 
+        font_size: 60
