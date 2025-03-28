@@ -10,13 +10,15 @@ MainWidget:
         height:200
         orientation:"vertical"
         pos:(200, 100)
+        disabled:False if switch_.active else True
 
     Switch:
+        id:switch_
         pos:(0,150)
         text:"Toggle Button"
 
     Label:
-        text:"Je suis un label"
+        text:text_.text
         pos:(200,0)
         color:"lime"
         font_size:30
@@ -29,6 +31,12 @@ MainWidget:
         value: slide.value
 
     Label:
-        text : str(50)   
+        text : str(round(slide.value))
         pos: (300, 150) 
         font_size: 60
+
+    TextInput:
+        id: text_
+        multiline:False
+        width:200
+        height:40    
